@@ -102,8 +102,11 @@ class ProgressiveManager extends Manager {
     this.title = 'Not a manager'
     this.bonus = 0
   }
-  hire(employee) {
-    this.reports.push(employee)
+  hire(){
+    super.hire();
+    this.managerTitle()
+  }
+  managerTitle() {
     if (this.reports.length >= 1 && this.reports.length <= 3) {
       this.title = 'Barely Manager'
     } else if (this.reports.length >= 4 && this.reports.length <= 10) {
