@@ -160,7 +160,7 @@ class Machine {
   }
   makeWidgets(num) {
      this.widgets_made_count += num
-     this.wear_and_tear_count += Math.floor(num / 50)
+     this.wear_and_tear_count = Math.floor(this.widgets_made_count / 50)
   }
   fixMachine(){
     this.needs_reboot = true
